@@ -29,7 +29,7 @@ def image_transformer(image_data):
     image = Image.open(io.BytesIO(image_data))
     return transform(image).unsqueeze(0)
 
-def predict_flower(model, image_data):
+def predict_image(model, image_data):
 
     image_tensor = image_transformer(image_data)
     output = model(image_tensor)
