@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from image_classifier import create_model, predict_flower
+from image_classifier import create_model, predict_image
 
 app = Flask(__name__)
 model = create_model()
@@ -10,9 +10,9 @@ def predicted():
         return jsonify({'error': 'Image not found'}), 400
 
     image = request.files['image'].read()
-    flower_name = predict_flower(model, image)
+    object_name = predict_image(model, image)
 
-    return jsonify({'flower_name' : flower_name})
+    return jsonify({'object_name' : object_name})
 
 if __name__ == '__main__':
 	app.run(debug=True)

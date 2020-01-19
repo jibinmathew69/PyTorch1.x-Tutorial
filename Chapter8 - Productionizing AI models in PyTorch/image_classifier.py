@@ -34,6 +34,6 @@ def predict_image(model, image_data):
     image_tensor = image_transformer(image_data)
     output = model(image_tensor)
     _, prediction = output.max(1)
-    flower_index = prediction.item()
+    object_index = prediction.item()
 
-    return idx_flower[flower_index]
+    return idx_flower[object_index]
