@@ -14,7 +14,7 @@ def create_model():
     model.eval()
     return model
 
-def image_transformer():
+def image_transformer(image_data):
     transform = transforms.Compose([
         transforms.Resize(256),
         transforms.CenterCrop(224),
@@ -22,3 +22,6 @@ def image_transformer():
         transforms.Normalize(mean=[0.485, 0.456, 0.406],
                              std=[0.229, 0.224, 0.225])
     ])
+
+    image = Image.open(io.BytesIO(image_data))
+    return transform(image).unsqueeze(0)
