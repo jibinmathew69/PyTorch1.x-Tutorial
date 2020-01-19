@@ -5,7 +5,7 @@ from PIL import Image
 import torchvision.transforms as transforms
 import json
 
-with open('idx_flower.json') as f:
+with open('idx_class.json') as f:
     idx_flower = json.load(f)
 
 
