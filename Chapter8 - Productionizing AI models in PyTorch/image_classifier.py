@@ -26,3 +26,14 @@ def image_transformer(image_data):
 
     image = Image.open(io.BytesIO(image_data))
     return transform(image).unsqueeze(0)
+
+def predict_flower(model, image_data):
+    with open('idx_flower.json') as f:
+        idx_flower = json.load(f)
+
+    image_tensor = image_transformer(image_data)
+    output = model(image_tensor)
+    _, prediction = output.max(1)
+    flower_index = prediction.item()
+
+    return idx_flower[flower_index]
