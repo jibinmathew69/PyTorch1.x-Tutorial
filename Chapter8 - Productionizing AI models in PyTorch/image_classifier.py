@@ -12,9 +12,8 @@ with open('idx_flower.json') as f:
 
 def create_model():
 
-    model_path = "checkpoint_final.pth"
+    model_path = "densenet161.pth"
     model = models.densenet161(pretrained=True)
-    model.classifier = nn.Linear(2208, 102)
     model.load_state_dict(torch.load(model_path, map_location='cpu'), strict=False)
     model.eval()
     return model
