@@ -6,6 +6,10 @@ from PIL import Image
 import torchvision.transforms as transforms
 import json
 
+with open('idx_flower.json') as f:
+    idx_flower = json.load(f)
+
+
 def create_model():
 
     model_path = "checkpoint_final.pth"
@@ -28,8 +32,6 @@ def image_transformer(image_data):
     return transform(image).unsqueeze(0)
 
 def predict_flower(model, image_data):
-    with open('idx_flower.json') as f:
-        idx_flower = json.load(f)
 
     image_tensor = image_transformer(image_data)
     output = model(image_tensor)
