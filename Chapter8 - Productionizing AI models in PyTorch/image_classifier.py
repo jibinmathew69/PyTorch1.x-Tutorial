@@ -6,7 +6,7 @@ import torchvision.transforms as transforms
 import json
 
 with open('idx_class.json') as f:
-    idx_flower = json.load(f)
+    idx_class = json.load(f)
 
 
 def create_model():
@@ -36,4 +36,4 @@ def predict_image(model, image_data):
     _, prediction = output.max(1)
     object_index = prediction.item()
 
-    return idx_flower[object_index]
+    return idx_class[object_index]
