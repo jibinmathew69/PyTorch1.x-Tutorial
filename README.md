@@ -44,6 +44,7 @@ This repository contains jupyter notebooks and python files for Deep Learning so
     * Visualizing DCGAN results
     * [Running PGGAN with PyTorch hub](Chapter6%20-%20Exploring%20Generative%20Adversarial%20Networks-Part2.ipynb)
 * Chapter7 - Deep Reinforcement Learning:
+    * Introducing Deep Reinforcement Learning
     * [Introducing OpenAI gym - Cartpole](Chapter7%20-%20Deep%20Reinforcement%20Learning.ipynb)
     * [Introducing DQN](Chapter7%20-%20Deep%20Reinforcement%20Learning-DQN.ipynb)
     * Implementing DQN Class
