@@ -11,7 +11,7 @@ This repository contains jupyter notebooks and python files for Deep Learning so
     * Interoperating NumPy bridge
     * Gradients and no gradients
     * Viewing tensors in PyTorch
-* [Chapter2 - Dealing with Neural Networks]Chapter2%20-%20Dealing%20with%20Neural%20Networks.ipynb):
+* [Chapter2 - Dealing with Neural Networks](Chapter2%20-%20Dealing%20with%20Neural%20Networks.ipynb):
     * Defining the neural network class
     * Creating a fully connected network
     * Defining the Loss Function
