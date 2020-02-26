@@ -36,7 +36,12 @@ This repository contains jupyter notebooks and python files for Deep Learning so
     * Building a Multilayer LSTM network
     * Building a Bidirectional LSTM network
 * [Chapter5 - Transfer Learning and TensorBoard](Chapter5%20-%20Transfer%20Learning.ipynb):
-    * Transfer Learning for Computer Vision
+    * Adapting a pretrained model
+    * Implementing model training
+    * Implementing model testing
+    * Loading the dataset
+    * Defining the TensorBoard writer
+    * Training the model and unfreezing layers
 * Chapter6 - Exploring Generative Adversarial Networks:
     * [Creating a DCGAN Generator](Chapter6%20-%20Exploring%20Generative%20Adversarial%20Networks-Part1.ipynb)
     * Creating a DCGAN Discriminator
